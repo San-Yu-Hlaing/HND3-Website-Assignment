@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for a DoBu Martial Arts account — choose your membership plan and start your martial arts journey today.">
+  <meta name="keywords" content="register, sign up, create account, DoBu Martial Arts membership">
+  <title>Register | DoBu Martial Arts</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="DoBu Martial Arts Home">
+        <span class="logo-mark" aria-hidden="true">DB</span> DoBu Martial Arts
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="martial-arts.html">Martial Arts</a></li>
+          <li><a href="classes.html">Classes &amp; Prices</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="login.html" class="nav-cta">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Create Your Account</h1>
+        <p>Join DoBu Martial Arts — register below and start your training journey.</p>
+      </div>
+    </section>
+
+    <section class="bg-muted">
+      <div class="container form-section">
+        <div class="form-card">
+          <h2>Register</h2>
+          <p class="form-subtitle">Complete the form to create your DoBu member account</p>
+
+          <div class="prototype-notice" role="note">
+            <strong>Front-end prototype:</strong> Registration data is stored in localStorage for demonstration only. Never store real passwords in browser storage. Production systems require server-side validation, password hashing (bcrypt/Argon2), and HTTPS.
+          </div>
+
+          <div id="selected-plan-banner" class="selected-plan-banner" role="status" aria-live="polite"></div>
+
+          <form id="register-form" novalidate>
+            <div class="form-message" role="alert" aria-live="polite"></div>
+
+            <div class="form-group">
+              <label for="reg-name">Full Name</label>
+              <input type="text" id="reg-name" name="fullname" autocomplete="name" required placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-email">Email Address</label>
+              <input type="email" id="reg-email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-phone">Phone Number</label>
+              <input type="tel" id="reg-phone" name="phone" autocomplete="tel" required placeholder="07XXX XXXXXX">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-dob">Date of Birth</label>
+             <input type="date" id="reg-dob" name="dob" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-password">Password</label>
+                <input type="password" id="reg-password" name="password" autocomplete="new-password" required placeholder="Min. 8 characters">
+              </div>
+              <div class="form-group">
+                <label for="reg-confirm">Confirm Password</label>
+                <input type="password" id="reg-confirm" name="confirm" autocomplete="new-password" required placeholder="Repeat password">
+              </div>
+            </div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1.25rem;">Password must be at least 8 characters with one uppercase letter and one number.</p>
+
+            <div class="form-group">
+              <label for="membership-plan">Membership Plan</label>
+              <select id="membership-plan" name="plan" required>
+                <option value="">Select a plan...</option>
+                <option value="Basic">Basic — £25/month (1 art, 2 sessions/week)</option>
+                <option value="Intermediate">Intermediate — £35/month (1 art, 3 sessions/week)</option>
+                <option value="Advanced">Advanced — £45/month (2 arts, 5 sessions/week)</option>
+                <option value="Elite">Elite — £60/month (Unlimited classes)</option>
+               <option value="Junior">Junior — £25/month (All kids sessions)</option>
+              </select>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="reg-terms" name="terms" required>
+              <label for="reg-terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+          </form>
+
+          <div class="form-footer">
+            <p>Already have an account? <a href="login.html">Log in here</a></p>
+            <p>Not sure which plan? <a href="membership.html">Compare membership plans</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-mark" aria-hidden="true">DB</span> DoBu Martial Arts</a></div>
+        <div><h2>Quick Links</h2><ul><li><a href="membership.html">Membership</a></li><li><a href="login.html">Login</a></li></ul></div>
+        <div><h2>Connect</h2><ul><li><a href="community.html">Community</a></li></ul></div>
+        <div><h2>Contact</h2><ul><li><a href="tel:01615550198">0161 555 0198</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 DoBu Martial Arts. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
